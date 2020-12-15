@@ -75,6 +75,17 @@ public class RestController2 {
         String host = instance.getHost();
         int port = instance.getPort();
 
+        /**
+
+         ////这样传也是可以滴，设置头信息
+         HttpHeaders httpHeaders = new HttpHeaders();
+         httpHeaders.add("cookie", "Just To Java");
+         HttpEntity<String> request = new HttpEntity<>(json, httpHeaders);
+         String url = "http://" + host + ":" + port + "/postRest2";
+         ResponseEntity<String> stringResponseEntity = restTemplate.postForEntity(url, request, String.class);
+
+         */
+
         String url = "http://" + host + ":" + port + "/postRest2";
         ResponseEntity<String> stringResponseEntity = restTemplate.postForEntity(url, json, String.class);
         String body = stringResponseEntity.getBody();
