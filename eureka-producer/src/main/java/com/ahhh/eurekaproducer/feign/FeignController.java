@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
  * @date 2020/12/15
  */
 @RestController
-public class FeignConteoller {
+public class FeignController {
     /**
      * 将参数放在 Url 路径中
      * @param id
