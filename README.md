@@ -41,3 +41,11 @@ Feign中的继承、日志、请求重试与数据压缩:
     feign-commons-eureka-consumer
     eureka-server
     eureka-producer
+    
+4、服务容错保护Resilience4j
+基本用法:
+    resilience4j-no-springboot
+    
+在微服务中的应用
+    resilience-eureka-springboot
+        
