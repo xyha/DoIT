@@ -1,0 +1,14 @@
+# rules.yml 文件可以定义在任意位置，但是建议大家放在 Prometheus 的安装目录中，这样方便查找，
+# rules.yml 配置完成后，接下来我们需要在 Prometheus 的配置文件中加载这个配置
+
+groups:
+  - name: server-dwon      # 表示配置的名称
+    rules:
+      - alert: InstanceDown     # 告警规则的名称
+        expr: up==0    # 基于 PromQL 表达式告警触发条件，用于计算是否有时间序列满足该条件
+        for: 5s    # 评估等待时间，可选参数。用于表示只有当触发条件持续一段时间后才发送告警。在等待期间新产生告警的状态为 pending
+        labels:    # 自定义标签，允许用户指定要附加到告警上的一组附加标签
+          severity: page
+        annotations:  # 用于指定一组附加信息，比如用于描述告警详细信息的文字等，annotations的内容在告警产生时会一同作为参数发送到Alertmanager
+          summary: "Instance {{ $labels.instance }} down"
+          description: "{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 5 seconds."

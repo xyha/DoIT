@@ -46,6 +46,9 @@ Feign中的继承、日志、请求重试与数据压缩:
 基本用法:
     resilience4j-no-springboot
     
-在微服务中的应用
+在微服务中的应用：
     resilience-eureka-springboot
-        
+    
+Micrometer实现微服务监控：(Prometheus、Grafana、Alertmanger用法)
+    micrometer-actuator
+    
