@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: neo_route   # 我们自定义的路由 ID，保持唯一，代码中就是 route() 方法的第一个参数
+          uri: http://httpbin.org   # 需要转发的目标服务地址，r -> r.path("/get").uri("http://httpbin.org") 代码使用了函数时编程简化代码
+          predicates:   # 路由条件，Predicate 接受一个输入参数，返回一个布尔值结果。该接口包含多种默认方法来将 Predicate 组合成其他复杂的逻辑（比如：与，或，非）
+            - Path=/xxx/get
+          filters:   # 过滤规则
+            - StripPrefix=1
