@@ -51,4 +51,12 @@ Feign中的继承、日志、请求重试与数据压缩:
     
 Micrometer实现微服务监控：(Prometheus、Grafana、Alertmanger用法)
     micrometer-actuator
-    
+
+5、服务网关Gateway
+Gateway的使用：
+    gateway
+Gateway和Eureka配合使用：
+    gateway-eureka
+    eureka-server
+    eureka-producer
+    feign-eureka-consumer
