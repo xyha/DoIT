@@ -60,3 +60,7 @@ Gateway和Eureka配合使用：
     eureka-server
     eureka-producer
     feign-eureka-consumer
+6、配置中心 Config
+配置中心的简单使用：
+    config-server
+    config-client
