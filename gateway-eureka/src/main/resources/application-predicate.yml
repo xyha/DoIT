@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        # 通过时间匹配
+#        - id: time_route
+#          uri: lb://FEIGN-EUREKA-CONSUMER
+#          predicates:
+#            - After=2018-04-22T06:06:06+08:00[Asia/Shanghai]
+
+        # 通过请求方式匹配
+#        - id: method_route
+#          uri: lb://FEIGN-EUREKA-CONSUMER
+#          predicates:
+#            - Method=GET
+
+        # 通过请求路径匹配
+#        - id: path_route
+#          uri: lb://FEIGN-EUREKA-CONSUMER
+#          predicates:
+#            - Path=/xyh/{segment}
+#          filters:
+#            - StripPrefix=1
+        # 通过请求参数匹配
+#        - id: query_route
+#          uri: http://ityouknow.com
+#          predicates:
+#            - Query=smile, pu.  # 只要当请求中包含 smile 属性并且参数值是以 pu 开头的长度为三位的字符串才会进行匹配和路由
+
+        # 还有很多。。。。不举例了
+
+#注意：一个请求满足多个路由条件时，请求只会被首个成功匹配的路由转发。

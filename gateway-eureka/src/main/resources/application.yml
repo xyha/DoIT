@@ -1,15 +1,16 @@
 server:
   port: 8888
 
-# 是否开启通过注册中心进行路由转发的功能，通过 serviceId 转发到服务，默认为 false
 spring:
   application:
     name: gateway-eureka
+  profiles:
+    active: filters
   cloud:
     gateway:
       discovery:
         locator:
-          enabled: true
+          enabled: true  # 是否开启通过注册中心进行路由转发的功能，通过 serviceId 转发到服务，默认为 false
 
 eureka:
   client:

@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: add_request_parameter_route
+          uri: lb://FEIGN-EUREKA-CONSUMER
+          filters:
+            - AddRequestParameter=name, bar  # 匹配的请求中添加相关参数
+          predicates:
+            - Method=GET
+
+
+# Filter 需要和 Predicate 配合使用
