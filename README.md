@@ -84,3 +84,12 @@ Spring Cloud Config 服务化、动态刷新、重试
     config-eureka-server
     config-eureka-client
     eureka-server
+
+7、消息总线 Bus
+RabbitMQ的简单使用：
+    rabbitmq
+
+Spring Cloud Bus 动态刷新配置:
+    bus-config-eureka-server
+    bus-config-eureka-client
+    eureka-server
