@@ -25,7 +25,6 @@ RestTemplate:
     eureka-server
     eureka-producer(多个实例，修改端口号)
     
-    
 3、服务消费OpenFeign
 声明式服务调用Feign:
     feign-eureka-consumer
@@ -55,12 +54,29 @@ Micrometer实现微服务监控：(Prometheus、Grafana、Alertmanger用法)
 5、服务网关Gateway
 Gateway的使用：
     gateway
+    
 Gateway和Eureka配合使用：
     gateway-eureka
     eureka-server
     eureka-producer
     feign-eureka-consumer
+    
 6、配置中心 Config
 配置中心的简单使用：
     config-server
     config-client
+    
+配置中心的安全管理和文件加解密：
+    config-server-encrypt-asymmetry
+    config-client
+
+    加密：http://127.0.0.1:8001/encrypt
+    解密：http://127.0.0.1:8001/decrypt
+
+    加密：不可逆加密、可逆加密
+    不可逆加密：
+        例： Spring Security 或者 Shiro，常见的算法如 MD5 消息摘要算法以及 SHA 安全散列算法
+    可逆加密：对称加密、非对称加密
+        例：对称加密，常见的算法有 DES、3DES、AES 等
+            非对称加密不仅可以用来做加密，也可以用来做签名，使用场景还是非常多的，常见的加密算法是 RSA 
+            
