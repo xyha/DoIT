@@ -80,3 +80,7 @@ Gateway和Eureka配合使用：
         例：对称加密，常见的算法有 DES、3DES、AES 等
             非对称加密不仅可以用来做加密，也可以用来做签名，使用场景还是非常多的，常见的加密算法是 RSA 
             
+Spring Cloud Config 服务化、动态刷新、重试
+    config-eureka-server
+    config-eureka-client
+    eureka-server
