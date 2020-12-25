@@ -1,4 +1,4 @@
-package com.ahhh.stream.consumer;
+package com.ahhh.stream.producer;
 
 import com.ahhh.stream.channel.MsgChannel;
 import org.springframework.beans.factory.annotation.Autowired;
