@@ -97,6 +97,6 @@ Spring Cloud Bus 动态刷新配置:
 8、数据流 stream
 构建消息驱动的微服务：
     steam
-stream深入实践:(异步处理，定时任务)
+stream深入实践:(异步处理、定时任务（需要在rabbit中启动插件）、限流削峰)
     stream-deep-into
     

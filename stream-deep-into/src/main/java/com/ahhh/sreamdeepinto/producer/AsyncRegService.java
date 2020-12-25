@@ -1,6 +1,6 @@
 package com.ahhh.sreamdeepinto.producer;
 
-import com.ahhh.sreamdeepinto.channel.RegChannel;
+import com.ahhh.sreamdeepinto.channel.AsyncRegChannel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.stereotype.Service;
@@ -16,11 +16,11 @@ import java.util.Map;
  * @date 2020/12/25
  */
 @Service
-//@EnableBinding(RegChannel.class) 如果生产者消费者分开的话，这里要加个注解
-public class RegService {
+//@EnableBinding(AsyncRegChannel.class) 如果生产者消费者分开的话，这里要加个注解
+public class AsyncRegService {
 
     @Autowired
-    RegChannel regChannel;
+    AsyncRegChannel regChannel;
 
     public Map<String, Object> reg(String email, String phone, String password) {
         Map<String, Object> map = new HashMap<>();

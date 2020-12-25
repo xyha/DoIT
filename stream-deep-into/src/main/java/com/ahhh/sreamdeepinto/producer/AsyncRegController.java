@@ -14,9 +14,9 @@ import java.util.Map;
  * @date 2020/12/25
  */
 @RestController
-public class RegController {
+public class AsyncRegController {
     @Autowired
-    RegService regService;
+    AsyncRegService regService;
 
     @PostMapping("/doReg")
     public Map<String, Object> reg(String email, String phone, String password) {

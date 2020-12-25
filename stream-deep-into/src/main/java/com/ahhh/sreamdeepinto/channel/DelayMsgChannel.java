@@ -7,18 +7,18 @@ import org.springframework.messaging.SubscribableChannel;
 
 /**
  * @author ahhh
- * @title: RegChannel
+ * @title: DelayMsgChannel
  * @projectName eureka-server
- * @description: 自定义的消息通道
+ * @description: 消息通道（控制定时）
  * @date 2020/12/25
  */
-public interface RegChannel {
-    String INPUT = "reg-input-channel";
-    String OUTPUT = "reg-output-channel";
-
-    @Output(OUTPUT)
-    MessageChannel output();
+public interface DelayMsgChannel {
+    String INPUT = "delay_msg_input";
+    String OUTPUT = "delay_msg_output";
 
     @Input(INPUT)
     SubscribableChannel input();
+
+    @Output(OUTPUT)
+    MessageChannel output();
 }

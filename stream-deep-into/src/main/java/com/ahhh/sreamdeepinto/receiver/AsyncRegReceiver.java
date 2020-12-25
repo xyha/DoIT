@@ -1,6 +1,7 @@
 package com.ahhh.sreamdeepinto.receiver;
 
-import com.ahhh.sreamdeepinto.channel.RegChannel;
+import com.ahhh.sreamdeepinto.channel.AsyncRegChannel;
+import com.ahhh.sreamdeepinto.service.MailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
@@ -16,8 +17,8 @@ import java.util.Map;
  * @description: 消息消费者，用来读取消息中间件中的消息
  * @date 2020/12/25
  */
-@EnableBinding(RegChannel.class)
-public class RegReceiver {
+@EnableBinding(AsyncRegChannel.class)
+public class AsyncRegReceiver {
 
     //用来将 Thymeleaf 模版渲染成 HTML 页面
     @Autowired
@@ -26,7 +27,7 @@ public class RegReceiver {
     @Autowired
     MailService mailService;
 
-    @StreamListener(RegChannel.INPUT)
+    @StreamListener(AsyncRegChannel.INPUT)
     public void sendVerifyCode(Map<String, Object> map) {
         //发送验证邮件和短信
         System.out.println("receive:" + map);
