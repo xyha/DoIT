@@ -2,7 +2,7 @@ package com.ahhh.stream.producer;
 
 import com.ahhh.stream.channel.MsgChannel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.messaging.support.MessageBuilder;
+import org.springframework.integration.support.MessageBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

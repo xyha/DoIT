@@ -93,3 +93,10 @@ Spring Cloud Bus 动态刷新配置:
     bus-config-eureka-server
     bus-config-eureka-client
     eureka-server
+    
+8、数据流 stream
+构建消息驱动的微服务：
+    steam
+stream深入实践:(异步处理，定时任务)
+    stream-deep-into
+    
