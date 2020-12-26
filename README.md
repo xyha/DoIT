@@ -100,3 +100,11 @@ Spring Cloud Bus 动态刷新配置:
 stream深入实践:(异步处理、定时任务（需要在rabbit中启动插件）、限流削峰)
     stream-deep-into
     
+9、数据跟踪 Sleuth
+    sleuth
+    (实践了 Sleuth 在 Web 调用、异步调用、定时任务中的方式)
+    (一般不会单独的使用 Spring Cloud Sleuth ，往往是结合 ZipKin 等图形界面软件一起使用)
+    
+10、链路跟踪 Zipkin(docker中部署zipin服务端 + rabbitMq + elasticsearch)
+    zipkin-producer
+    zipkin-consumer
