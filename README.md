@@ -108,3 +108,18 @@ stream深入实践:(异步处理、定时任务（需要在rabbit中启动插件
 10、链路跟踪 Zipkin(docker中部署zipin服务端 + rabbitMq + elasticsearch)
     zipkin-producer
     zipkin-consumer
+    
+11、微服务监控 Admin
+    admin-server
+    admin-client
+    
+    admin-eureka-server
+    admin-eureka-client
+    
+12、spring cloud alibaba 
+    nacos:
+        nacos
+        nacos-client
+    sentinel:
+        sentinel
+        sentinel-nacos
