@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ahhh</groupId>
-    <artifactId>nacos</artifactId>
+    <artifactId>nacos-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>nacos</name>
-    <description>Spring Cloud Alibaba Nacos</description>
+    <name>nacos-client</name>
+    <description>Spring Cloud Alibaba Nacos client</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -22,13 +22,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-alibaba-nacos-config</artifactId>
-            <version>0.9.0.RELEASE</version>
         </dependency>
 
         <dependency>
